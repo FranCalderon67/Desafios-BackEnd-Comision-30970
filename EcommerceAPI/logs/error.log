@@ -1,0 +1,4 @@
+{"level":"error","message":"Error DB :MongoServerError: Modifiers operate on fields but we found type null instead. For example: {$mod: {<field>: ...}} not {$set: null}"}
+{"level":"error","message":"Error DB :BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
+{"level":"error","message":"Error DB :BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
+{"level":"error","message":"Error DB :BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
