@@ -1,5 +1,5 @@
 type Producto {
-    _id: ID!,
+    id: ID!,
     name: String,
     price: Int,
     image: String,
@@ -8,12 +8,14 @@ type Producto {
 
 type Query{
     obtenerProductos: [Producto],
-    obtenerProductoPorId(id:ID):Producto,
+    obtenerProductoPorId(id: String):Producto,
 
 }
 
-input ModificarProductoPayload {
- _id: ID!,
+
+
+input UpdateProductPayload {
+     id: ID!,
     name: String,
     price: Int,
     image: String,
@@ -21,6 +23,7 @@ input ModificarProductoPayload {
 }
 
 type Mutation {
-  modificarProducto(args: ModificarProductoPayload): Producto
-  agregarProducto(_id:ID, name: String, price: Int, image: String, category: String): Producto
+    agregarProducto(name: String, price: Int, image: String, category: String): Producto
+    updateProduct(producto: UpdateProductPayload): String
+    deleteProduct(id: String): String
 }

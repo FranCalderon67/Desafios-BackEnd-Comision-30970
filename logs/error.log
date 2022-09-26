@@ -5,3 +5,7 @@
 {"level":"error","message":"Error DB :TypeError: Cannot read properties of undefined (reading 'db')"}
 {"level":"error","message":"Error DB :TypeError: Cannot read properties of undefined (reading 'db')"}
 {"level":"error","message":"Error DB :TypeError: Cannot read properties of undefined (reading 'db')"}
+{"level":"error","message":"Error DB :BSONTypeError: Argument passed in does not match the accepted types"}
+{"level":"error","message":"Error DB :BSONTypeError: Argument passed in does not match the accepted types"}
+{"level":"error","message":"Error DB :BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
+{"level":"error","message":"Error DB :BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}

@@ -6,13 +6,20 @@ const producto = require('./Daos/daoProducto.js');
 producto.conectarMongo()
 const schemaString = fs.readFileSync('./schema/productos.gql').toString();
 const schemaCompilado = buildSchema(schemaString);
+const { obtenerTodos,
+    obtenerPorId,
+    nuevoProducto,
+    actualizarProducto,
+    elimnarProducto } = require('./resolvers/productoResolver.js')
 
 const graphMiddleware = graphqlHTTP({
     schema: schemaCompilado,
     rootValue: {
-        obtenerProductos: producto.obtenerTodos(),
-        obtenerProductoPorId: producto.obtenerPorId(),
-        agregarProducto: producto.agregarItem()
+        obtenerProductos: obtenerTodos,
+        obtenerProductoPorId: obtenerPorId,
+        agregarProducto: nuevoProducto,
+        updateProduct: actualizarProducto,
+        deleteProduct: elimnarProducto
     },
     graphiql: true
 });
