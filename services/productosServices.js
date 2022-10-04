@@ -15,7 +15,7 @@ productosServices.obtnerPorId = async (id) => {
 
 productosServices.agregarProducto = async (producto) => {
     const nuevoProducto = await productoDao.agregarItem(producto)
-    return (`Producto Agregado ${nuevoProducto}`)
+    return productoDao.obtenerTodos()
 }
 
 productosServices.modificarProducto = async (id, data) => {

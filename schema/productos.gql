@@ -1,5 +1,5 @@
 type Producto {
-    id: ID!,
+    _id: ID!,
     name: String,
     price: Int,
     image: String,
@@ -15,7 +15,7 @@ type Query{
 
 
 input UpdateProductPayload {
-     id: ID!,
+     id: String,
     name: String,
     price: Int,
     image: String,
@@ -24,6 +24,6 @@ input UpdateProductPayload {
 
 type Mutation {
     agregarProducto(name: String, price: Int, image: String, category: String): Producto
-    updateProduct(producto: UpdateProductPayload): String
+    updateProduct(producto: UpdateProductPayload): Producto
     deleteProduct(id: String): String
 }

@@ -1,41 +1,42 @@
 const servicios = require('../services/productosServices.js')
 
-const obtenerTodos = async () => {
+const obtenerTodos = () => {
     try {
-        return await servicios.obtenerTodos()
+        return servicios.obtenerTodos()
     } catch (error) {
         console.log('ERROR=>', error)
     }
 }
 
-const obtenerPorId = async (id) => {
+const obtenerPorId = (id) => {
     try {
-        return await servicios.obtnerPorId(id)
+        return servicios.obtnerPorId(id)
     } catch (error) {
         console.log('ERROR=>', error)
     }
 }
 
-const nuevoProducto = async (producto) => {
+const nuevoProducto = (producto) => {
     try {
-        const nuevoProducto = await servicios.agregarProducto(producto)
-        return (`Producto Agregado ${nuevoProducto}`)
+        const nuevoProducto = servicios.agregarProducto(producto)
+        return servicios.obtenerTodos()
     } catch (error) {
         console.log('ERROR=>', error)
     }
 }
 
-const actualizarProducto = async (id, data) => {
+const actualizarProducto = (id, data) => {
     try {
-        return await servicios.modificarProducto(id, data)
+        return servicios.modificarProducto(id, data)
     } catch (error) {
         console.log("ERROR=>", error)
     }
 }
 
-const elimnarProducto = async (id) => {
+const elimnarProducto = (id) => {
     try {
-        await servicios.eliminarProducto(id)
+        servicios.eliminarProducto(id)
+        return servicios.obtenerTodos()
     } catch (error) {
         console.log('ERROR=>', error)
     }
